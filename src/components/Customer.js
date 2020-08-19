@@ -1,25 +1,16 @@
 import React from 'react';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
 
 class Customer extends React.Component{
 
     render(){
         return(
-            <div>
-                <CustomerProfile image={this.props.image}/>
-            </div>
-        );
-    }
+            <TableRow>
+                <TableCell>{this.props.name}</TableCell>
+                <TableCell><img src={this.props.image} alt="My image"/></TableCell>
 
-}
-
-
-class CustomerProfile extends React.Component{
-    render(){
-        return(
-            <div>
-                <img src={this.props.image} alt="My image"/>
-                <p>{this.props.name}</p>
-            </div>
+            </TableRow>
         );
     }
 
